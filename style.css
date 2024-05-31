@@ -3,7 +3,6 @@
 :root {
     --fonte-principal: 'Montserrat', sans-serif;
     --fonte-secundaria: 'Poppins', sans-serif;
-    --cor-gradiente: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 30%);
     --cor-verde-agua: #10E692;
     --cor-verde: #10E64A;
     --cor-azul-bebe-claro: #46EBE2;
@@ -15,7 +14,7 @@
 
 /* IMPORTANTE!!!
 Para usarem a cor gradiente nos textos usem essa formatação:
-    background: var(--cor-gradiente);
+    background: linear-gradient(to right, var(--cor-verde) %escolhida, var(--cor-azul) %escolhida);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 */
@@ -82,7 +81,7 @@ li:hover {
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
-    background: var(--cor-gradiente);
+    background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 30%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -117,4 +116,51 @@ li:hover {
     text-decoration: underline;
     font-weight: 100;
     color: var(--cor-azul-escuro);
+}
+
+#section-tecnologias {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.tecnologias_artigo {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+.tecnologias {
+    background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitulo_lixeira {
+    color: var(--cor-verde);
+}
+
+.subtitulo_mapeamento {
+    color: var(--cor-azul);
+}
+
+.explicacao_tecnologias {
+    max-width: 462px;
+}
+
+.tecnologias_artigo_lixeira {
+    margin-right: 150px;
+}
+
+.tecnologias_artigo_mapeamento {
+    margin-left: 150px;
 }
