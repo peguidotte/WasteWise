@@ -15,9 +15,8 @@
 /* IMPORTANTE!!!
 Para usarem a cor gradiente nos textos usem essa formatação:
     background: linear-gradient(to right, var(--cor-verde) %escolhida, var(--cor-azul) %escolhida);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-*/
+    -webkit-background-clip: text; -> Isso faz com que a mudança de cor se "clipe" somente ao texto, tirem isso e testem pra entender o funcionamento
+    -webkit-text-fill-color: transparent; -> Isso deixa o texto transparente, assim o background preencherá toda a cor do texto, o que da esse efeito de "pintando"*/
 
 body {
     height: 5000px;
@@ -52,14 +51,16 @@ li {
     background-size: 200% 100%;
     background-position: 100%;
     -webkit-background-clip: text;
-    /*Isso faz com que a mudança de cor se "clipe" somente ao texto, tirem isso e testem pra entender o funcionamento*/
     -webkit-text-fill-color: transparent;
-    /*Isso deixa o texto transparente, assim o background preencherá toda a cor do texto, o que da esse efeito de "pintando"*/
     transition: background-position 0.5s ease-in-out;
 }
 
 li:hover {
     background-position: 0%;
+}
+
+i#burguer {
+    display: none;
 }
 
 #section-problema {
@@ -163,4 +164,16 @@ li:hover {
 
 .tecnologias_artigo_mapeamento {
     margin-left: 150px;
+}
+
+@media screen and (max-width: 1250px) {
+    i#burguer {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 40px;
+    }
+    .header_nav_list {
+        display: none;
+    }
 }
