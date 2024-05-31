@@ -3,11 +3,118 @@
 :root {
     --fonte-principal: 'Montserrat', sans-serif;
     --fonte-secundaria: 'Poppins', sans-serif;
-    --cor-gradiente: linear-gradient(to right, #10E64A, #10ACE6);
+    --cor-gradiente: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 30%);
     --cor-verde-agua: #10E692;
     --cor-verde: #10E64A;
     --cor-azul-bebe-claro: #46EBE2;
     --cor-azul-bebe-escuro: #10E6DB;
     --cor-azul: #10ACE6;
-    --cor-azul-escuro: #1069E6; 
+    --cor-azul-escuro: #1069E6;
+    --cor-cinza: #393939;
+}
+
+/* IMPORTANTE!!!
+Para usarem a cor gradiente nos textos usem essa formatação:
+    background: var(--cor-gradiente);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+*/
+
+body {
+    height: 5000px;
+}
+
+header {
+    padding: 1.5% 4% 1.5% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(227, 227, 227, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.8s ease-in-out;
+}
+
+header.hide {
+    top: -100%;
+}
+
+.header_nav_list {
+    display: flex;
+    gap: 34px;
+    font-family: var(--fonte-principal);
+    font-size: 1.375rem;
+}
+
+li {
+    background: linear-gradient(to right, var(--cor-azul) 50%, var(--cor-cinza) 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    /*Isso faz com que a mudança de cor se "clipe" somente ao texto, tirem isso e testem pra entender o funcionamento*/
+    -webkit-text-fill-color: transparent;
+    /*Isso deixa o texto transparente, assim o background preencherá toda a cor do texto, o que da esse efeito de "pintando"*/
+    transition: background-position 0.5s ease-in-out;
+}
+
+li:hover {
+    background-position: 0%;
+}
+
+#section-problema {
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.problema_artigo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.titulo {
+    font-family: var(--fonte-principal);
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--cor-gradiente);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titulo_problema {
+    margin-bottom: 20px;
+}
+
+
+.titulo_explicacao {
+        font-family: var(--fonte-secundaria);
+        font-size: 1.375rem;
+        font-weight: light;
+        color: var(--cor-cinza);
+        width: 100%;
+        margin: 0 auto;
+        text-align: justify;
+}
+
+.explicacao_problema {
+    max-width: 642px;
+}
+
+.problema_fontes {
+    font-family: var(--fonte-secundaria);
+    font-size: .875rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.problema_fontes_fontes {
+    text-decoration: underline;
+    font-weight: 100;
+    color: var(--cor-azul-escuro);
 }
