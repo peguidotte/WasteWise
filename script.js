@@ -22,7 +22,7 @@ window.addEventListener('scroll', function () {
 
 function openMenu() {
     console.log ("Botão clicado")
-    const itens_nav = document.querySelector('.header_nav_list');
+    const itens_nav = document.querySelector('.nav_list');
     if (itens_nav && (itens_nav.style.display === 'none' || !itens_nav.style.display)) {
         itens_nav.style.display = 'block';
         itens_nav.style.position = 'absolute';
@@ -31,7 +31,7 @@ function openMenu() {
         itens_nav.style.textAlign = 'center';
         itens_nav.style.backgroundColor = 'rgba(227, 227, 227, 0.2)';
         
-        const navItems = document.querySelectorAll('.header_nav_list li');
+        const navItems = document.querySelectorAll('.nav_list li');
             navItems.forEach(item => {
                 item.style.padding = '20px';
             });
