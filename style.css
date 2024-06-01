@@ -24,6 +24,12 @@ body {
     background-color: var(--cor-cinza-fundo);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     padding: 1% 3% 1% 3%;
     display: flex;
@@ -207,6 +213,77 @@ header.scrolled .nav_list_item a {
     .nav_list {
         display: none;
     }
+}
+
+.div_contato {
+    width: 80%;
+}
+
+#contatoForm span {
+    margin-bottom: 5rem;
+    display: none;
+    color: rgb(128, 0, 0);
+}
+
+form {
+    width: 80%;
+    max-width: 30rem;
+    font-family: var(--fonte-principal);
+}
+
+label, 
+input, 
+textarea, 
+button {
+    display: block;
+    font-weight: 700;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    font-family: var(--fonte-principal);
+    padding: 1.25rem;
+}
+
+input,
+textarea {
+    margin-bottom: 1rem;
+    color: var(--cor-cinza);
+    background-color: var(--cor-cinza-fundo);
+    border: 0.125rem solid transparent;
+    border-radius: 1.125rem;
+    transition: border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-azul-bebe-escuro);
+    box-shadow: 0 0 0 0.075rem rgb(200, 200, 200);
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    min-height: 12.5rem;
+    resize: vertical;
+}
+
+button {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 100px;
+    background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 100%);
+    -webkit-text-fill-color: white;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 footer {

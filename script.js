@@ -52,3 +52,40 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
+
+//Validando Formulário
+document.getElementById('contatoForm').addEventListener('submit', function(event) {
+    var isValid = true;
+    
+    // Validação do nome
+    var nome = document.getElementById('nome').value;
+    if (nome.length <= 5) {
+        document.getElementById('nomeError').style.display = 'inline';
+        isValid = false;
+    } else {
+        document.getElementById('nomeError').style.display = 'none';
+    }
+    
+    // Validação do email
+    var email = document.getElementById('email').value;
+    if (!email.includes('@') || !email.includes('.com')) {
+        document.getElementById('emailError').style.display = 'inline';
+        isValid = false;
+    } else {
+        document.getElementById('emailError').style.display = 'none';
+    }
+    
+    // Validação da mensagem
+    var mensagem = document.getElementById('mensagem').value;
+    if (mensagem.split(' ').length <= 3) {
+        document.getElementById('mensagemError').style.display = 'inline';
+        isValid = false;
+    } else {
+        document.getElementById('mensagemError').style.display = 'none';
+    }
+    
+    // Se não for válido, prevenir o envio do formulário
+    if (!isValid) {
+        event.preventDefault();
+    }
+});
