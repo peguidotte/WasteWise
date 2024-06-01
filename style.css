@@ -10,6 +10,7 @@
     --cor-azul: #10ACE6;
     --cor-azul-escuro: #1069E6;
     --cor-cinza: #393939;
+    --cor-cinza-fundo: #F0F0F0;
 }
 
 /* IMPORTANTE!!!
@@ -19,20 +20,27 @@ Para usarem a cor gradiente nos textos usem essa formatação:
     -webkit-text-fill-color: transparent; -> Isso deixa o texto transparente, assim o background preencherá toda a cor do texto, o que da esse efeito de "pintando"*/
 
 body {
-    height: 5000px;
+    height: 100%;
+    background-color: var(--cor-cinza-fundo);
 }
 
 header {
-    padding: 1.5% 4% 1.5% 4%;
+    padding: 1% 3% 1% 3%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(227, 227, 227, 0.2);
+    background-color: rgba(255, 255, 255, 0.200);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: top 0.8s ease-in-out;
+}
+
+header img{
+    width: 20%;
 }
 
 header.hide {
@@ -44,10 +52,11 @@ header.hide {
     gap: 34px;
     font-family: var(--fonte-principal);
     font-size: 1.375rem;
+    font-weight: bold;
 }
 
 li {
-    background: linear-gradient(to right, var(--cor-azul) 50%, var(--cor-cinza) 50%);
+    background: linear-gradient(to right, var(--cor-azul) 50%, white 50%);
     background-size: 200% 100%;
     background-position: 100%;
     -webkit-background-clip: text;
@@ -63,38 +72,67 @@ i#burguer {
     display: none;
 }
 
+/* Classe para o header quando a página é rolada */
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+header.scrolled img {
+    content: url('./assets/Logo\ WASTEWISE\ Scrolled.svg');
+}
+
+header.scrolled .header_nav_list_item a {
+    background: linear-gradient(to right, var(--cor-azul) 50%, var(--cor-cinza) 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease-in-out;
+}
+
+#slide_main, #slide_mid{
+    width: 100%;
+}
+
 #section-problema {
-    padding: 15%;
+    background-color: white;
+    margin: 1.5% 2.5%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    border-radius: 2rem;
+    gap: 1.5rem;
 }
 
 .problema_artigo {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
+}
+
+.problema_artigo img{
+    width: 50%;
+    border-radius: 2.5rem;
 }
 
 .titulo {
     font-family: var(--fonte-principal);
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: bolder;
     text-transform: uppercase;
     background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 30%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.titulo_problema {
-    margin-bottom: 20px;
+    align-self: flex-start;
 }
 
 
 .titulo_explicacao {
         font-family: var(--fonte-secundaria);
-        font-size: 1.375rem;
+        font-size: 1.5rem;
         font-weight: light;
         color: var(--cor-cinza);
         width: 100%;
@@ -120,7 +158,8 @@ i#burguer {
 }
 
 #section-tecnologias {
-    padding: 10%;
+    margin: 1.5% 2.5%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +169,13 @@ i#burguer {
 .tecnologias_artigo {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 1.875rem;
+}
+
+.tecnologias_artigo img {
+    width: 40%;
+    border-radius: 2rem;
 }
 
 .tecnologias {
@@ -141,7 +186,7 @@ i#burguer {
 
 .subtitulo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -158,14 +203,6 @@ i#burguer {
     max-width: 462px;
 }
 
-.tecnologias_artigo_lixeira {
-    margin-right: 150px;
-}
-
-.tecnologias_artigo_mapeamento {
-    margin-left: 150px;
-}
-
 @media screen and (max-width: 1250px) {
     i#burguer {
         display: flex;
@@ -176,4 +213,41 @@ i#burguer {
     .header_nav_list {
         display: none;
     }
+}
+
+footer {
+    padding: 1% 3% 1% 3%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(./assets/background\ Footer.svg);
+    background-position: center;
+    width: 100%;
+    transition: top 0.8s ease-in-out;
+    color: white;
+}
+
+.paragrafo_footer {
+    font-family: var(--fonte-secundaria);
+        font-size: 1rem;
+        font-weight: light;
+        color: rgb(200, 200, 200);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+}
+
+footer div{
+    width: 50%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+footer i {
+    width: 20%;
+    height: 20%;
+    font-size: 2rem;
 }

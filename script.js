@@ -42,4 +42,13 @@ function openMenu() {
     }
 }
 
-
+// Caso o usuario role a página com o header visível, troca a cor da logo e das escritas para não haver interferência na leitura
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const slidePrincipalHeight = document.querySelector('#slide_main').offsetHeight;
+    if (window.scrollY > slidePrincipalHeight) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
