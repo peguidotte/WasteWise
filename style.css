@@ -45,7 +45,7 @@ header {
     transition: top 0.8s ease-in-out;
 }
 
-header img{
+header img {
     width: 20%;
 }
 
@@ -66,6 +66,7 @@ li {
     background-size: 200% 100%;
     background-position: 100%;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background-position 0.5s ease-in-out;
 }
@@ -92,11 +93,13 @@ header.scrolled .nav_list_item a {
     background-size: 200% 100%;
     background-position: 100%;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background-position 0.5s ease-in-out;
 }
 
-#slide_main, #slide_mid{
+#slide_main,
+#slide_mid {
     width: 100%;
 }
 
@@ -116,14 +119,15 @@ header.scrolled .nav_list_item a {
     font-size: 3rem;
     font-weight: bolder;
     text-transform: uppercase;
-    background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 30%);
+    background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 40%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     align-self: flex-start;
 }
 
 .subtitulo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-principal);
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 10px;
@@ -138,19 +142,19 @@ header.scrolled .nav_list_item a {
     gap: 50px;
 }
 
-.article_rounded_background img{
+.article_rounded_background img {
     width: 50%;
     border-radius: 2.5rem;
 }
 
 .paragraph_description {
-        font-family: var(--fonte-secundaria);
-        font-size: 1.5rem;
-        font-weight: light;
-        color: var(--cor-cinza);
-        width: 100%;
-        margin: 0 auto;
-        text-align: justify;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: light;
+    color: var(--cor-cinza);
+    width: 100%;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 .paragraph_problema {
@@ -203,18 +207,6 @@ header.scrolled .nav_list_item a {
     max-width: 462px;
 }
 
-@media screen and (max-width: 1250px) {
-    i#burguer {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        padding-right: 40px;
-    }
-    .nav_list {
-        display: none;
-    }
-}
-
 .div_contato {
     width: 80%;
 }
@@ -231,9 +223,9 @@ form {
     font-family: var(--fonte-principal);
 }
 
-label, 
-input, 
-textarea, 
+label,
+input,
+textarea,
 button {
     display: block;
     font-weight: 700;
@@ -255,7 +247,7 @@ textarea {
     border: 0.125rem solid transparent;
     border-radius: 1.125rem;
     transition: border-color 0.3s,
-    box-shadow 0.3s;
+        box-shadow 0.3s;
 }
 
 input:hover,
@@ -302,15 +294,23 @@ footer {
 
 .paragrafo_footer {
     font-family: var(--fonte-secundaria);
-        font-size: 1rem;
-        font-weight: light;
-        color: rgb(200, 200, 200);
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
+    font-size: 1rem;
+    font-weight: light;
+    color: rgb(200, 200, 200);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
-footer div{
+.footer_nav_list {
+    display: flex;
+    justify-content: center;
+    font-family: var(--fonte-principal);
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+footer div {
     width: 50%;
     height: auto;
     align-items: center;
@@ -321,4 +321,117 @@ footer i {
     width: 20%;
     height: 20%;
     font-size: 2rem;
+}
+
+/*Esse media screen serve para resolver o problema da navbar ficar sobrepondo a Logo*/
+@media screen and (max-width: 1200px) {
+    i#burguer {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 200px;
+        padding-right: 30%;
+        color: white;
+    }
+
+    .nav_list {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    body,
+    main,
+    .section_rounded_background,
+    .article_rounded_background,
+    .section_none_background,
+    .article_none_background {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        width: 80%;
+        padding: 2% 0% 2% 2%;
+    }
+
+    .nav_list {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .section_rounded_background {
+        background-color: white;
+        margin: 3% 4%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 16px;
+        gap: 16px;
+    }
+
+    .section_none_background {
+        padding: 5%;
+        gap: 16px;
+    }
+
+    .article_rounded_background {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .article_none_background {
+        gap: 10px;
+    }
+
+    .article_rounded_background img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .article_none_background img {
+        width: 90%;
+        border-radius: 8px;
+    }
+
+    .section_tecnologias img {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 1.5625rem;
+        font-weight: 900;
+        align-self: center;
+        background: linear-gradient(to right, var(--cor-verde) 0%, var(--cor-azul) 60%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitulo {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .paragraph_description {
+        font-size: .9375rem;
+        text-align: justify;
+    }
+
+    .bibliography_fonts {
+        font-size: .625rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .titulo_form {
+        font-size: 1.25rem;
+        text-align: center;
+        padding-top: 4%;
+    }
+
+    .div_contato {
+        width: 100%;
+    }
 }

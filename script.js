@@ -1,4 +1,26 @@
-//Caso o usuário não mexa o mouse por 3segundos o Header desaparece, porém caso o usuário ainda não tenha scrollado a página isso não acontecerá
+//Mudando a imagem do header de acordo com o tamanho de tela
+
+//Garante que a imagem carregada é a correta ao redimensionar a tela.
+window.addEventListener('resize', function() {
+    var imgElement = document.getElementById('slide_main');
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        imgElement.src = "./assets/FotoHeader-Mobile.svg";
+    } else {
+        imgElement.src = "./assets/Background Principal.svg";
+    }
+});
+
+//Garante que a imagem carregada é a correta ao carregar a página.
+document.addEventListener('DOMContentLoaded', (event) => {
+    var imgElement = document.getElementById('slide_main');
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        imgElement.src = "./assets/FotoHeader- Mobile.svg";
+    } else {
+        imgElement.src = "./assets/Background Principal.svg";
+    }
+});
+
+//Header Responsivo
 let timer;
 
 document.addEventListener('mousemove', function () {
@@ -20,8 +42,8 @@ window.addEventListener('scroll', function () {
 });
 
 
+//Menu Hamburguer Responsivo
 function openMenu() {
-    console.log ("Botão clicado")
     const itens_nav = document.querySelector('.nav_list');
     if (itens_nav && (itens_nav.style.display === 'none' || !itens_nav.style.display)) {
         itens_nav.style.display = 'block';
@@ -29,16 +51,17 @@ function openMenu() {
         itens_nav.style.top = '100%';
         itens_nav.style.right = '0';
         itens_nav.style.textAlign = 'center';
-        itens_nav.style.backgroundColor = 'rgba(227, 227, 227, 0.2)';
         
+
         const navItems = document.querySelectorAll('.nav_list li');
             navItems.forEach(item => {
-                item.style.padding = '20px';
+                item.style.padding = '10px';
             });
 
 
     } else if (itens_nav) {
         itens_nav.style.display = 'none'
+
     }
 }
 
@@ -46,10 +69,13 @@ function openMenu() {
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     const slidePrincipalHeight = document.querySelector('#slide_main').offsetHeight;
+    const menuHamburger = document.querySelector('#burguer')
     if (window.scrollY > slidePrincipalHeight) {
         header.classList.add('scrolled');
+        menuHamburger.style.color = 'black';
     } else {
         header.classList.remove('scrolled');
+        menuHamburger.style.color = 'white';
     }
 });
 
@@ -59,7 +85,7 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     
     // Validação do nome
     var nome = document.getElementById('nome').value;
-    if (nome.length <= 5) {
+    if (nome.length <= 3) {
         document.getElementById('nomeError').style.display = 'inline';
         isValid = false;
     } else {
@@ -87,5 +113,45 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     // Se não for válido, prevenir o envio do formulário
     if (!isValid) {
         event.preventDefault();
+    } 
+});
+
+// Carrossel de imagens
+
+function createImageChanger(id, src) {
+    let currentImage = 0;
+    let imageElement = document.getElementById(id);
+
+    function changeImage() {
+        imageElement.src = src[currentImage];
+        imageElement.style.transition = "opacity 0.5s";
+        imageElement.style.opacity = 0;
+
+        setTimeout(function() {
+            imageElement.style.opacity = 1;
+        }, 100);
+
+        currentImage = (currentImage + 1) % src.length;
     }
+
+    return {
+        start: function() {
+            this.interval = setInterval(changeImage, 5000);
+        },
+        stop: function() {
+            clearInterval(this.interval);
+        }
+    };
+}
+
+let imagemPublicoChanger = createImageChanger('imagemPublico', ['./assets/Publico1.svg', './assets/Publico2.svg']);
+
+imagemPublicoChanger.start();
+
+document.getElementById('imagemPublico').addEventListener('mouseover', function() {
+    imagemPublicoChanger.stop();
+});
+
+document.getElementById('imagemPublico').addEventListener('mouseout', function() {
+    imagemPublicoChanger.start();
 });
