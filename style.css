@@ -434,4 +434,33 @@ footer i {
     .div_contato {
         width: 100%;
     }
+
+    .footer_nav_list {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    footer div{
+        margin-bottom: 1rem;
+    }
+
+    .paragrafo_footer {
+        margin-top: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    input,
+    textarea,
+    button {
+    padding: 0.8rem;
+    margin-bottom: 0.1rem;
+    }
+
+    label {
+        margin-bottom: 0.1rem;
+    }
+
+    .error {
+        font-size: 0.8rem;
+    }
 }
