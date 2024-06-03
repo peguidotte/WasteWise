@@ -1,5 +1,7 @@
 ![WasteWise Logo](./assets/LogoWASTEWISE.svg)
 
+## [Deploy Vercel](https://waste-wise-eta.vercel.app/)
+
 <h1>Sumário</h1>
 <ul>
 <li class="nav_list_item"><a href="#explicacao_projeto">Explicação do Projeto</a></li>
