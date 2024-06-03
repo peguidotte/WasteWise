@@ -85,7 +85,7 @@ header.scrolled {
 }
 
 header.scrolled img {
-    content: url('./assets/Logo\ WASTEWISE\ Scrolled.svg');
+    content: url('./assets/LogoWASTEWISE_Scrolled.svg');
 }
 
 header.scrolled .nav_list_item a {
@@ -99,7 +99,8 @@ header.scrolled .nav_list_item a {
 }
 
 #slide_main,
-#slide_mid {
+#slide_mid,
+#slide_bottom {
     width: 100%;
 }
 
@@ -285,7 +286,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-image: url(./assets/background\ Footer.svg);
+    background-image: url(./assets/backgroundFooter.svg);
     background-position: center;
     width: 100%;
     transition: top 0.8s ease-in-out;
@@ -328,6 +329,7 @@ footer i {
     i#burguer {
         display: flex;
         justify-content: flex-end;
+        font-size: 2.5rem;
         max-width: 200px;
         padding-right: 30%;
         color: white;
@@ -338,7 +340,9 @@ footer i {
     }
 }
 
-@media screen and (max-width: 600px) {
+/*Resolvemos utilizar um max-width que também comportasse dispositivos como 
+tablets, assim garantimos melhor responsividade em diversos dispositivos*/
+@media screen and (max-width: 900px) {
 
     body,
     main,
@@ -440,7 +444,7 @@ footer i {
         margin-bottom: 2rem;
     }
 
-    footer div{
+    footer div {
         margin-bottom: 1rem;
     }
 
@@ -452,8 +456,8 @@ footer i {
     input,
     textarea,
     button {
-    padding: 0.8rem;
-    margin-bottom: 0.1rem;
+        padding: 0.8rem;
+        margin-bottom: 0.1rem;
     }
 
     label {

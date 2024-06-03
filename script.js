@@ -3,21 +3,23 @@
 //Garante que a imagem carregada é a correta ao redimensionar a tela.
 window.addEventListener('resize', function() {
     var imgElement = document.getElementById('slide_main');
-    if (window.matchMedia('(max-width: 600px)').matches) {
-        imgElement.src = "./assets/FotoHeader-Mobile.svg";
+    if (window.matchMedia('(max-width: 900px)').matches) {
+        imgElement.src = "./assets/BackgroundPrincipalMobile.svg";
     } else {
-        imgElement.src = "./assets/Background Principal.svg";
+        imgElement.src = "./assets/BackgroundPrincipal.svg";
     }
+    console.log(imgElement.src);
 });
 
 //Garante que a imagem carregada é a correta ao carregar a página.
 document.addEventListener('DOMContentLoaded', (event) => {
     var imgElement = document.getElementById('slide_main');
-    if (window.matchMedia('(max-width: 600px)').matches) {
-        imgElement.src = "./assets/FotoHeader- Mobile.svg";
+    if (window.matchMedia('(max-width: 900px)').matches) {
+        imgElement.src = "./assets/BackgroundPrincipalMobile.svg";
     } else {
-        imgElement.src = "./assets/Background Principal.svg";
+        imgElement.src = "./assets/BackgroundPrincipal.svg";
     }
+    console.log(imgElement.src);
 });
 
 //Header Responsivo
@@ -51,6 +53,7 @@ function openMenu() {
         itens_nav.style.top = '100%';
         itens_nav.style.right = '0';
         itens_nav.style.textAlign = 'center';
+        console.log("Menu aberto");
         
 
         const navItems = document.querySelectorAll('.nav_list li');
@@ -61,7 +64,7 @@ function openMenu() {
 
     } else if (itens_nav) {
         itens_nav.style.display = 'none'
-
+        console.log("Menu fechado")
     }
 }
 
@@ -83,7 +86,7 @@ window.addEventListener('scroll', function() {
 document.getElementById('contatoForm').addEventListener('submit', function(event) {
     var isValid = true;
     
-    // Validação do nome
+    // Nome
     var nome = document.getElementById('nome').value;
     if (nome.length <= 3) {
         document.getElementById('nomeError').style.display = 'inline';
@@ -91,8 +94,9 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     } else {
         document.getElementById('nomeError').style.display = 'none';
     }
+    console.log(`nome: ${nome} isValid: ${isValid}`);
     
-    // Validação do email
+    // Email
     var email = document.getElementById('email').value;
     if (!email.includes('@') || !email.includes('.com')) {
         document.getElementById('emailError').style.display = 'inline';
@@ -100,8 +104,9 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     } else {
         document.getElementById('emailError').style.display = 'none';
     }
+    console.log(`email: ${email} isValid: ${isValid}`);
     
-    // Validação da mensagem
+    // Mensagem
     var mensagem = document.getElementById('mensagem').value;
     if (mensagem.split(' ').length <= 3) {
         document.getElementById('mensagemError').style.display = 'inline';
@@ -109,6 +114,7 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     } else {
         document.getElementById('mensagemError').style.display = 'none';
     }
+    console.log(`mensagem: ${mensagem} isValid: ${isValid}`);
     
     // Se não for válido, prevenir o envio do formulário
     if (!isValid) {
@@ -116,7 +122,7 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     } 
 });
 
-// Carrossel de imagens
+// Lógica para o Carrossel de imagens
 
 function createImageChanger(id, src) {
     let currentImage = 0;
@@ -145,7 +151,6 @@ function createImageChanger(id, src) {
 }
 
 let imagemPublicoChanger = createImageChanger('imagemPublico', ['./assets/Publico1.svg', './assets/Publico2.svg']);
-
 imagemPublicoChanger.start();
 
 document.getElementById('imagemPublico').addEventListener('mouseover', function() {
