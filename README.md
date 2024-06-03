@@ -6,7 +6,7 @@
 <li class="nav_list_item"><a href="#design_software">Design do Software</a></li>
 <li class="nav_list_item"><a href="#html_css_js">HTML, CSS e JS</a></li>
 <li class="nav_list_item"><a href="#simulacao_arduino">Simulação com Arduino</a></li>
-<li class="nav_list_item"><a href="#integraçao_python">Integração com Python</a></li>
+<li class="nav_list_item"><a href="#integracao_python">Integração com Python</a></li>
 <li class="nav_list_item"><a href="integrantes">Integrantes</a></li>
 </ul>
 
@@ -39,7 +39,7 @@
         <p style="color: lightgray;">Utilizamos JavaScript para adicionar interatividade ao site, como validação de formulários e manipulação dinâmica do conteúdo.</p>
         <h2>Figma</h2>
         <a href="https://www.figma.com/design/YmQFY7CxyoDzbxsjOHhV1e/Front-End-GS?node-id=0-1&t=8Neam0E6htJpEc1N-0"
-                aria-label="Design do Figma" target="_blank"><p style="font-style: italic;">Prototipagem do Design no Figma<i class="fa-brands fa-figma"></i>.<span style="color: lightgray"> (Usamos como inspiração, não corresponde ao design inteiro do projeto).</p></a>
+                aria-label="Design do Figma" target="_blank"><p style="font-style: italic;">Prototipagem do Design no Figma<i class="fa-brands fa-figma"></i>.</a><span style="color: lightgray"> (Usamos como inspiração, não corresponde ao design inteiro do projeto).</p>
     </article>
 </section>
 
@@ -62,25 +62,12 @@
 <section id="integrantes">
     <article>
         <h2>Integrantes</h2>
-        <ul>    
-            <li style="display:flex; align-items:center; justify-content:center; gap:20px;">
-                <img src="https://avatars.githubusercontent.com/u/129889380?v=4" width="50px" style="border-radius:50px" alt="Pedro Guidotte Icon">
-                <h3>Pedro Guidotte</h3>
-                <a href="https://github.com/pedro-guidotte" target="_blank" style="font-style: italic">GitHub <i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/pedro-guidotte/" target="_blank" style="font-style: italic">LinkedIn <i class="fab fa-linkedin"></i></a>
-            </li>
-            <li style="display:flex; align-items:center; justify-content:center; gap:20px;">
-                <img src="https://avatars.githubusercontent.com/u/158540749?v=4)" width="50px" style="border-radius:50px" alt="Gabriel Vara Icon">
-                <h3>Gabriel Vara</h3>
-                <a href="https://github.com/gabrielvara" target="_blank" style="font-style: italic">GitHub <i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/gabriel-vara" target="_blank" style="font-style: italic">LinkedIn <i class="fab fa-linkedin"></i></a>
-            </li>
-            <li style="display:flex; align-items:center; justify-content:center; gap:20px;">
-                <img src="https://avatars.githubusercontent.com/u/158527393?v=4" width="50px" style="border-radius:50px" alt="Leonardo Correa Icon">
-                <h3>Leonardo Correa</h3>
-                <a href="https://github.com/leonardo-correa" target="_blank" style="font-style: italic">GitHub <i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/leonardo-correa/" target="_blank" style="font-style: italic">LinkedIn <i class="fab fa-linkedin"></i></a>
-            </li>
-        </ul>
+                <h3><img src="https://avatars.githubusercontent.com/u/129889380?v=4" width="50px" alt="Pedro Guidotte Icon">  Pedro Guidotte<a href="https://github.com/pedro-guidotte" target="_blank" style="font-style: italic">  /GitHub <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pedro-guidotte/" target="_blank" style="font-style: italic">  /LinkedIn<i class="fab fa-linkedin"></i></a></h3>
+                <h3><img src="https://avatars.githubusercontent.com/u/158540749?v=4)" width="50px" alt="Gabriel Vara Icon">  Gabriel Vara<a href="https://github.com/gabrielvara" target="_blank" style="font-style: italic"> 
+ /GitHub <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriel-vara" target="_blank" style="font-style: italic">  /LinkedIn <i class="fab fa-linkedin"></i></a></h3>
+                <h3><img src="https://avatars.githubusercontent.com/u/158527393?v=4" width="50px" alt="Leonardo Correa Icon">  Leonardo Correa<a href="https://github.com/leonardo-correa" target="_blank" style="font-style: italic">  /GitHub <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/leonardo-correa/" target="_blank" style="font-style: italic">  /LinkedIn <i class="fab fa-linkedin"></i></a></h3>
     </article>
 </section>
