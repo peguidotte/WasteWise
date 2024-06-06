@@ -8,7 +8,7 @@
 <li class="nav_list_item"><a href="#design_software">Design do Software</a></li>
 <li class="nav_list_item"><a href="#html_css_js">HTML, CSS e JS</a></li>
 <li class="nav_list_item"><a href="#simulacao_arduino">Simulação com Arduino</a></li>
-<li class="nav_list_item"><a href="#integracao_python">Integração com Python</a></li>
+<li class="nav_list_item"><a href="#integracao_python">Analise de caso com Python</a></li>
 <li class="nav_list_item"><a href="integrantes">Integrantes</a></li>
 </ul>
 
@@ -48,16 +48,16 @@
 <section id="simulacao_arduino">
     <article>
         <h2>Simulação com Arduino</h2>
-        <h3><a href="url.workwi" target="_blank" style="font-style: italic">Workwi <i class="fab fa-workwi"></i></a></h3>
-        <p style="color: lightgray">Essa seção será utilizada para explicar a funcionalidade da simulação com Arduino e como ela se integra ao projeto.</p>
+        <h3><a href="https://wokwi.com/projects/399705116640261121" target="_blank" style="font-style: italic">Workwi <i class="fab fa-workwi"></i></a></h3>
+        <p style="color: lightgray">Simulação de Balança e sensor de capacidade inteligente.</p>
     </article>
 </section>
 
 <section id="integracao_python">
     <article>
-        <h2>Integração com Python</h2>
-        <h3><a href="https://github.com/seu-usuario/repositorio-python" target="_blank" style="font-style: italic">Repositório Python <i class="fab fa-python"></i></a></h3>
-        <p style="color: lightgray">Essa seção será utilizada para explicar a integração com Python e como o código se relaciona com o projeto.</p>
+        <h2>Analise de caso com Python</h2>
+        <h3><a href="https://github.com/peguidotte/Analise-WasteWise" target="_blank" style="font-style: italic">Repositório Python <i class="fab fa-python"></i></a></h3>
+        <p style="color: lightgray">Simulação de Análise de dados em Python.</p>
     </article>
 </section>
 
